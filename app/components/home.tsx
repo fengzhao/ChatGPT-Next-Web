@@ -102,7 +102,7 @@ export function ChatList() {
       state.currentSessionIndex,
       state.selectSession,
       state.removeSession,
-    ]
+    ],
   );
 
   return (
@@ -193,7 +193,7 @@ export function Chat(props: { showSideBar?: () => void }) {
       setPromptHints(promptStore.search(text));
     },
     100,
-    { leading: true, trailing: true }
+    { leading: true, trailing: true },
   );
 
   const onPromptSelect = (prompt: Prompt) => {
@@ -279,7 +279,7 @@ export function Chat(props: { showSideBar?: () => void }) {
               preview: true,
             },
           ]
-        : []
+        : [],
     )
     .concat(
       userInput.length > 0
@@ -291,7 +291,7 @@ export function Chat(props: { showSideBar?: () => void }) {
               preview: true,
             },
           ]
-        : []
+        : [],
     );
 
   // auto scroll
@@ -553,7 +553,7 @@ export function Home() {
       state.newSession,
       state.currentSessionIndex,
       state.removeSession,
-    ]
+    ],
   );
   const loading = !useHasHydrated();
   const [showSideBar, setShowSideBar] = useState(true);
@@ -579,9 +579,9 @@ export function Home() {
       >
         <div className={styles["sidebar-header"]}>
           <div className={styles["sidebar-title"]}>ChatGPT Next</div>
-          <div className={styles["sidebar-sub-title"]}>
+          {/* <div className={styles["sidebar-sub-title"]}>
             Build your own AI assistant.
-          </div>
+          </div> */}
           <div className={styles["sidebar-logo"]}>
             <ChatGptIcon />
           </div>
@@ -618,11 +618,11 @@ export function Home() {
                 }}
               />
             </div>
-            <div className={styles["sidebar-action"]}>
+            {/* <div className={styles["sidebar-action"]}>
               <a href={REPO_URL} target="_blank">
                 <IconButton icon={<GithubIcon />} />
               </a>
-            </div>
+            </div> */}
           </div>
           <div>
             <IconButton
